@@ -1,0 +1,13 @@
+<div class="journaling-container">
+    <h2 class="journaling-title">Journal Entry</h2>
+  
+    <div class="journal-entry-date-container">
+      <label for="entryDate">Date:</label>
+      <input type="date" id="entryDate" [(ngModel)]="entryDate" required>
+    </div>
+  
+    <textarea class="journal-entry-field" [(ngModel)]="journalEntry" placeholder="Write your thoughts and feelings here..."></textarea>
+  
+    <button class="save-button" (click)="saveEntry()">Save Entry</button>
+  </div>
+  

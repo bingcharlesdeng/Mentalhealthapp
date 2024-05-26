@@ -1,0 +1,21 @@
+<div class="mood-tracker-container">
+    <h2>Mood Tracker</h2>
+  
+    <div class="mood-options-container">
+      <span class="mood-option" (click)="selectMood('happy')"></span>
+      <span class="mood-option" (click)="selectMood('sad')"></span>
+      <span class="mood-option" (click)="selectMood('angry')"></span>
+      </div>
+  
+    <div class="selected-mood-container" *ngIf="selectedMood">
+      <span class="selected-mood">Selected Mood: {{ selectedMood }}</span>
+    </div>
+  
+    <textarea class="mood-note" [(ngModel)]="moodNote" placeholder="How are you feeling today? (Optional)"></textarea>
+  
+    <div class="mood-actions">
+      <button class="save-button" (click)="saveMood()">Save Mood</button>
+      <button class="history-button" routerLink="/mood-history">Track History</button>
+    </div>
+  </div>
+  
